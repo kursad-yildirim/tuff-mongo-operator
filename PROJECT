@@ -1,0 +1,20 @@
+domain: tuff.local
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+  sdk.x-openshift.io/v1: {}
+projectName: tuff-mongo-operator
+repo: gitlab.cee.redhat.com/kyildiri/tuff-mongo-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: tuff.local
+  group: app
+  kind: TuffMongo
+  path: gitlab.cee.redhat.com/kyildiri/tuff-mongo-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

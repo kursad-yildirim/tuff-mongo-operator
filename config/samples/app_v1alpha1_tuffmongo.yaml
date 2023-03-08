@@ -1,0 +1,6 @@
+apiVersion: app.tuff.local/v1alpha1
+kind: TuffMongo
+metadata:
+  name: tuffmongo-sample
+spec:
+  # TODO(user): Add fields here

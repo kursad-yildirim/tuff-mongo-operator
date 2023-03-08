@@ -1,0 +1,20 @@
+# permissions for end users to view tuffmongoes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: tuffmongo-viewer-role
+rules:
+- apiGroups:
+  - app.tuff.local
+  resources:
+  - tuffmongoes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - app.tuff.local
+  resources:
+  - tuffmongoes/status
+  verbs:
+  - get

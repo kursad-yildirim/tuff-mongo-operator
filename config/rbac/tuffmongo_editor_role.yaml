@@ -1,0 +1,24 @@
+# permissions for end users to edit tuffmongoes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: tuffmongo-editor-role
+rules:
+- apiGroups:
+  - app.tuff.local
+  resources:
+  - tuffmongoes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - app.tuff.local
+  resources:
+  - tuffmongoes/status
+  verbs:
+  - get
